@@ -1,66 +1,199 @@
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(rgb(217, 73, 217), rgb(59, 49, 188));
+      }
+      * {
+        border: 1px solid rgb(221, 109, 238);
+      }
+      .yinying {
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+          0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: lab(90.34% 11.75 -13.91);
+        box-shadow: inset 0 -3em 3em rgba(51, 41, 189, 0.1),
+          0 0 0 2px rgb(177, 177, 232), 0.3em 0.3em 1em rgba(86, 30, 103, 0.3);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgl {
+        margin-left: 8px;
+      }
+      .center {
+        text-align: center;
+      }
+      .b {
+        border: 0px;
+      }
+      .zi {
+        text-decoration: none;
+      }
+      .font{
+        color: hsl(249, 74%, 32%);
+      }
+      .back{
+        width: 380PX;
+        height: 500px;
+        background-size: cover;
+        background-image: url(https://tse1-mm.cn.bing.net/th/id/OIP-C.NGrfRBUSFikUGhxK8Vkf6gHaO0?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 400px; z-index: 2" class="baise flex column">
+      <!-- title栏-->
+      <div class="flex back mg8" style="height: 500px;" >
+      <h1 style="font-size: 700%;background: linear-gradient(to right, #8622aa, hsl(244, 64%, 47%));
+background-clip: text;
+color: transparent;-webkit-text-stroke-color: hsl(180, 96%, 48%);-webkit-text-stroke-width: 1px;font-style: oblique;" class="b">
+404<br>Utopia</h1>
+      </div>
+      <!-- menu -->
+      <div class="flex1 ">
+         <p class="b" style="font-size: large; color: rgb(166, 32, 193)">
+                ▌Stage模式→【偶像企划】<br><br>▌Create模式→【游戏×漫画工坊】<br><br>▌核心协议
+          </p>
+      
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- logo栏 -->
+      <div
+        style="
+          height: 500px;
+          z-index: 1;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          
+        "
+        
+        class=" mgl baise"
+      >
+        <img
+          src="https://youke1.picui.cn/s1/2025/09/19/68ccd1b91961b.png"
+          width="500px"
+          class="b"
+          alt="404utopia.logo "
+        />
+      </div>
+      <!-- 内容栏 -->
+      <div class="flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 数据块 -->
+            <div style="height: 100px" class="flex1 baise mgr8 center">
+              <img
+                src="https://bpic.588ku.com/element_origin_min_pic/24/07/30/8821c26fb8c46ea6091b966f90c39980.jpg"
+                class="b"
+                width="100"
+                alt="DOKIDOKI"
+              />
+            </div>
+            <div style="height: 100px" class="flex1 baise mgr8 center">
+              <img
+                src="https://tse3-mm.cn.bing.net/th/id/OIP-C.kqd8BpXpQzENL3lAw18P-AHaHa?w=181&h=182&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+                width="100"
+                class="b"
+                alt="DOKIDOKI"
+              />
+            </div>
+            <div style="height: 100px" class="flex1 baise mgr8 center">
+              <img
+                src="https://bpic.588ku.com/element_origin_min_pic/24/07/30/8821c26fb8c46ea6091b966f90c39980.jpg"
+                width="100"
+                alt="DOKIDOKI"
+                class="b"
+              />
+            </div>
+            <div style="height: 100px" class="flex1 baise center">
+              <img
+                src="https://tse2-mm.cn.bing.net/th/id/OIP-C.Dg9jFsSVqjUwrRKtko9XOQHaHa?w=168&h=182&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                width="90"
+                class="b"
+                alt="DOKIDOKI"
+              />
+            </div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column font">
+             <!-- 1 -->
+            <div style="height: 160px font: 1em sans-serif;" class="baise mgt8">
+              <p class="b" style="font-size: large; color: rgb(166, 32, 193)">
+                ▌Stage模式→【偶像企划】
+              </p>
+              <p class="b">
+                &#10036两位从服务器残骸中诞生的数字灵魂，以全息投影与血肉之躯同频演出。
+              </p>
+              <p class="b">&#10036她们的live是电流与心跳的共振：</p>
+              <p class="b">
+                &#10036迷幻电子音包裹暴烈摇滚，赛博朋克舞美中坠落樱花雨。
+              </p>
+              <p class="b">&#10036演出坐标？未知；门票？需破解暗网验证码。</p>
+              <p class="b" style="color: #a788ab;">（提示：关注我们的GlitchArt动态追踪信号碎片）</p>
+            </div>
+            <!-- 2 -->
+            <div style="height: 160px" class="baise mgt8">
+              <p class="b" style="font-size: large; color: rgb(166, 32, 193)">
+                ▌Create模式→【游戏×漫画工坊】
+              </p> 
+              <p class="b">&#10036制作中：游戏&同名漫画《404》</p>
+              <p class="b">——新世界的相遇与冒险,夹杂着欢快与迷惘。每话更新随附原创ASMR音轨，建议佩戴神经元耳机阅览</p>
+            </div>
+            <!-- 3 -->
+            <div style="height: 160px" class="baise mgt8">
+              <p class="b" style="font-size: large; color: rgb(166, 32, 193)">
+               ▌核心协议：
+「用故障美学重构乌托邦定义权」
+              </p> 
+              <p class="b">&#10036所有作品皆可跨媒介互译——漫画分镜会成为游戏隐藏关卡BGM，演唱会即兴台词将触发下一话剧情分支。</p>
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>404utopia</title>
-
-</head>
-
-<body>
-  <div style="background-color:#f0ffff;text-align:center;padding:10px;"> 
-<img src="https://youke1.picui.cn/s1/2025/09/19/68ccd1b91961b.png" alt="utopia.logo" width="400" height="150">
- </div>
-
-  <div style="max-size:700px;margin:30px auto;text-align:center;padding:15px;line-height:1.7;">
-<p>大狗屎sy</p>
-<p>狗屎</p>
-<p>【404Utopia——未定义の理想结界】</p>
- <p>双核共振·虚实交错の创世双子 ◢◤</p>
-<p>我们是「404Utopia」——</p>
-<p>一个存在于数据缝隙与幻想边境的悖论集合体。</p>
-<p>既是舞台上用歌声撕裂黑暗的地下偶像双人组，</p>
-<p>也是用代码与笔墨编织世界的跨媒介创作共同体。</p>
-
-<p>▌Stage模式→【偶像企划】</p>
-<p>两位从服务器残骸中诞生的数字灵魂，以全息投影与血肉之躯同频演出。</p>
-<p>她们的live是电流与心跳的共振：</p>
-<p>迷幻电子音包裹暴烈摇滚，赛博朋克舞美中坠落樱花雨。</p>
-<p>演出坐标？未知；门票？需破解暗网验证码。</p>
-<p>（提示：关注我们的GlitchArt动态追踪信号碎片）</p>
-
-<p>▌Create模式→【游戏×漫画工坊】</p>
-
-<p>■ 连载中：漫画《404号脑穹公域》</p>
-<p>——偶像与黑客的双重人生，在东京霓虹与数据深海之间反复横跳,
-每话更新随附原创ASMR音轨，建议佩戴神经元耳机阅览</p>
-
-<p>▌核心协议：
-「用故障美学重构乌托邦定义权」</p>
-</p>所有作品皆可跨媒介互译——
-漫画分镜会成为游戏隐藏关卡BGM，
-演唱会即兴台词将触发下一话剧情分支。</p>
-
-<p>★ 现在订阅我们的「悖论信道」★
-（每周四晚0:04更新异常波形档案）
-唯有接受404之人，方能抵达Utopia。</p>
-
-<p>▷ 官方混沌入口：404Utopia.xyz ◁
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 2" class="flex column mg8">
+          <!-- 第一块 -->
+          <div style="width: 100% ;height: 35%;text-align: center;" class="baise">
+            <h2 class="b" style="color: hsl(266, 61%, 23%);;">★ 现在订阅我们的「悖论信道」★<br><br></>
+              <p class="b" style="font-size: 60%;color: oklab(78.157% 0.00238 -0.0897);">(每周四晚0:04更新异常波形档案）<br><br>唯有接受404之人，方能抵达Utopia。</p>
+          </div>
+          <!-- 第二块 -->
+           <div style="width: 100%;height: 30%;text-align: center;" class="baise mgt8">
+            <p class="b" style="color: hwb(244 12% 13%);"><br><br><br>▷ 官方混沌入口：404Utopia.xyz ◁<br>
 （温馨提示：首次访问请允许Cookie植入追踪滤镜）</p>
-</div>
-  <div style="background-color:#f0ffff;text-align:center;padding:20px;font-size:12px;">
-<p>utopia-official</p>
 
-</div>
-    
-
-
-</body>
-
-
+           </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
